@@ -14,3 +14,9 @@ jobs:
     steps:
         - name : Hello World
           run : echo "Hello World"
+
+        - name: Multi-line bash
+          run : |
+              echo "I am"
+              echo "a multi-line"
+              echo "script"
