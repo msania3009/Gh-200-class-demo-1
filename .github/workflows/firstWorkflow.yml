@@ -4,6 +4,7 @@ name : First Workflow
 # Event at which the workflow to be triggered
 on : 
   push:
+  workflow_dispatch:
 
 jobs:
 
