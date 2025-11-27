@@ -22,6 +22,7 @@ jobs:
               echo "script"
 
   echo-goodbye:
+    needs : Hello-Job
     runs-on : ubuntu-slim
     steps: 
      - name: Say Goodbye
