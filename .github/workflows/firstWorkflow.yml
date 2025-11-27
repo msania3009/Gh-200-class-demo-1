@@ -32,7 +32,7 @@ jobs:
         echo "Event name: ${{github.event_name}}" # Context Variable
 
   windows-echo:
-    if: github_event_name == 'push'
+    if: github.event_name == 'push'
     runs-on : windows_latest
     steps:
      - name: Show OS
