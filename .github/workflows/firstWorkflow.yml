@@ -20,3 +20,13 @@ jobs:
               echo "I am"
               echo "a multi-line"
               echo "script"
+
+  echo-goodbye:
+    runs-on : ubuntu-slim
+    steps: 
+     - name: Say Goodbye
+       run: echo "Goodbye!:"
+     - name: Event name
+       run : |
+        echo "Event name: ${{github.event_name}}" # Context Variable
+     
