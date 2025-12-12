@@ -1,0 +1,11 @@
+name: "Commit Message Checker"
+description: "Checks if commit message meets minimum length"
+author: "Your Name"
+inputs:
+  minLength:
+    description: "Minimum commit message length"
+    required: true
+    default: "10"
+runs:
+  using: "node16"
+  main: "index.js"
