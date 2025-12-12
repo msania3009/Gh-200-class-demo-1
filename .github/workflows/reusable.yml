@@ -1,0 +1,17 @@
+name: Reusable Workflow Example
+
+on:
+  workflow_call:
+    inputs:
+      greeting:
+        required: true
+        type: string
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    env:
+      COMPANY: "Microsoft"   # environment variable defined here
+    steps:
+      - name: Print greeting with env variable
+        run: echo "Hello, ${{ inputs.greeting }} from $COMPANY!"
