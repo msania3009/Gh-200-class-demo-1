@@ -1,0 +1,16 @@
+name: Commit Message Check
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Commit Message Checker
+        uses: ./.github/actions/check-commit
+        with:
+          minLength: "15"
